@@ -6,7 +6,7 @@
 
 #include "STD_TYPES.h"
 #include "BitMath.h"
-#include "../lib/MCAL/DIO/DIO_Interface.h"
+#include <DIO/DIO_Interface.h>
 
 
 

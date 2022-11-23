@@ -28,7 +28,8 @@
 			"lcd_interface.h": "c",
 			"dio_interface.h": "c",
 			"bitmath.h": "c",
-			"std_types.h": "c"
+			"std_types.h": "c",
+			"delay.h": "c"
 		}
 	}
 }
