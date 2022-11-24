@@ -4,60 +4,60 @@
 
 
 
-// void DIO_VoidPinMode ( PORT_PIN , u8 mode)
-// {
-// 	switch (mode)
-// 	{
-// 	case INPUT:
-// 			switch (PORT)
-// 			{
-// 			case DIO_A:{	CLEAR_BIT(DDRA , PIN);	}		break;
-// 			case DIO_B:{	CLEAR_BIT(DDRB , PIN);	}		break;
-// 			case DIO_C:{	CLEAR_BIT(DDRC , PIN);	}		break;
-// 			case DIO_D:{	CLEAR_BIT(DDRD , PIN);	}		break;
-// 			}	
-// 	 	break;
-// 	case OUTPUT:
-// 			switch (PORT)
-// 			{
-// 			case DIO_A:{	CLEAR_BIT(DDRA , PIN);	}		break;
-// 			case DIO_B:{	CLEAR_BIT(DDRB , PIN);	}		break;
-// 			case DIO_C:{	CLEAR_BIT(DDRC , PIN);	}		break;
-// 			case DIO_D:{	CLEAR_BIT(DDRD , PIN);	}		break;
-// 			}	
-// 	 	break;
-// 	}
-// }										//if mode is input set 1 the DDR to the specific PORT
-
-
-
-void DIO_VoidPinMode		(u8 port, u8 pin, u8 mode	){
-	if(port <4){
-		if(pin <8){
-
-			switch(mode){
-				case INPUT:{
-					switch(port){
-						case DIO_A:{	CLEAR_BIT(DDRA, pin);	}break;
-						case DIO_B:{	CLEAR_BIT(DDRB, pin);	}break;
-						case DIO_C:{	CLEAR_BIT(DDRC, pin);	}break;
-						case DIO_D:{	CLEAR_BIT(DDRD, pin);	}break;
-					}
-
-				}break;
-				case OUTPUT:{
-					switch(port){
-						case DIO_A:{	SET_BIT(DDRA, pin);		}break;
-						case DIO_B:{	SET_BIT(DDRB, pin);		}break;
-						case DIO_C:{	SET_BIT(DDRC, pin);		}break;
-						case DIO_D:{	SET_BIT(DDRD, pin);		}break;
-					}
-				}break;
-			}
-
-		}
+void DIO_VoidPinMode ( PORT_PIN , u8 mode)
+{
+	switch (mode)
+	{
+	case INPUT:
+			switch (PORT)
+			{
+			case DIO_A:{	CLEAR_BIT(DDRA , PIN);	}		break;
+			case DIO_B:{	CLEAR_BIT(DDRB , PIN);	}		break;
+			case DIO_C:{	CLEAR_BIT(DDRC , PIN);	}		break;
+			case DIO_D:{	CLEAR_BIT(DDRD , PIN);	}		break;
+			}	
+	 	break;
+	case OUTPUT:
+			switch (PORT)
+			{
+			case DIO_A:{	SET_BIT(DDRA , PIN);	}		break;
+			case DIO_B:{	SET_BIT(DDRB , PIN);	}		break;
+			case DIO_C:{	SET_BIT(DDRC , PIN);	}		break;
+			case DIO_D:{	SET_BIT(DDRD , PIN);	}		break;
+			}	
+	 	break;
 	}
-}
+}										//if mode is input set 1 the DDR to the specific PORT
+
+
+
+// void DIO_VoidPinMode		(u8 port, u8 pin, u8 mode	){
+// 	if(port <4){
+// 		if(pin <8){
+
+// 			switch(mode){
+// 				case INPUT:{
+// 					switch(port){
+// 						case DIO_A:{	CLEAR_BIT(DDRA, pin);	}break;
+// 						case DIO_B:{	CLEAR_BIT(DDRB, pin);	}break;
+// 						case DIO_C:{	CLEAR_BIT(DDRC, pin);	}break;
+// 						case DIO_D:{	CLEAR_BIT(DDRD, pin);	}break;
+// 					}
+
+// 				}break;
+// 				case OUTPUT:{
+// 					switch(port){
+// 						case DIO_A:{	SET_BIT(DDRA, pin);		}break;
+// 						case DIO_B:{	SET_BIT(DDRB, pin);		}break;
+// 						case DIO_C:{	SET_BIT(DDRC, pin);		}break;
+// 						case DIO_D:{	SET_BIT(DDRD, pin);		}break;
+// 					}
+// 				}break;
+// 			}
+
+// 		}
+// 	}
+// }
 
 void DIO_VoidDigitalWritePin	(u8 port, u8 pin, u8 val	)
 {
