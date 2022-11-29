@@ -4,26 +4,29 @@
 
 
 #include "DIO/DIO_Interface.h"
-
-// #define DIO_C Keypad_Port 
-// #define DDRC  Keypad_DDR 
-
-// #define col_a PIN_0
-// #define col_b PIN_1
-// #define col_c PIN_2
-// #define col_d PIN_3
-// 
-// #define row_a PIN_4
-// #define row_b PIN_5
-// #define row_c PIN_6
-// #define row_d PIN_7
- //these two have errors with the port because some pins are  internally connected
- // so i will need to define each pin and port used
+//to display output on LCD
+#include "LCD/LCD_INTERFACE.h"
 
 
 
 
+#define col_1 PORTC,PIN_0
+#define col_2 PORTC,PIN_1 
+#define col_3 PORTC,PIN_2
+#define col_4 PORTC,PIN_3 
 
+#define row_a PORTB,PIN_0
+#define row_b PORTB,PIN_1
+#define row_c PORTB,PIN_2
+#define row_d PORTB,PIN_3
+
+// u8 keypad[4][4] = //the matrix should look like this
+// {
+// 	{'a1','a2','a3','a4'},
+// 	{'b1','b2','b3','b4'},
+// 	{'c1','c2','c3','c4'},
+// 	{'d1','d2','d3','d4'}
+// };
 
 
 u8 keypad[4][4] = 
