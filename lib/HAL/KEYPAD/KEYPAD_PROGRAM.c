@@ -8,7 +8,10 @@
 
 void Keypad_Init()
 {
-    
+    //initialize grounds and inputs
+    //
+
+
 }
 
 
@@ -16,6 +19,8 @@ void Keypad_Init()
 u8 Find_touched()
 {
     
+
+
 }
 
 
